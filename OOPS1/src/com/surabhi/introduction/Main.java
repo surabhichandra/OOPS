@@ -74,8 +74,19 @@ class Student{
 
     //to call a constructor from another constructor
     //internally: new Student(13,"default person",100);
+    /*
+        -- this() is used to call another constructor of same class
+        -- you can do constructor chaining to remove code duplicacy
+        -- this() has to be the 1st line in the constructor and you can only use this() once per constructor.
+     */
     Student(){
-        this(13,"default person",100);
+        this(13);
+        System.out.println("default contructor");
+    }
+
+    Student(int rno){
+        this(rno, "Nitin",69);
+        System.out.println("rno contructor");
     }
 
     //Student arpit= new Student(17,"Arpit",89.7f);
@@ -84,5 +95,6 @@ class Student{
         this.rno=rno;
         this.name=name;
         this.marks=marks;
+        System.out.println("all contructor");
     }
 }

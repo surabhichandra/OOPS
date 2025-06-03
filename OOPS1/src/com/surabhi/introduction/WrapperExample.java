@@ -6,6 +6,11 @@ public class WrapperExample {
         Integer num=450;//creates an object of integer class
         Integer num2=451;
 
+        Integer x = 6666; // Integer x = new Integer(6666)
+        Integer y = x;
+        y = 55; // Integer y = new Integer(55)
+        System.out.println(x+" "+y);
+
         int b=20;
 //        System.out.println(a+" "+b);
         System.out.println(num+" "+num2);
@@ -18,6 +23,9 @@ public class WrapperExample {
 //        bonus=3;//cant modify final variables and integer is a final class and you always need to initialize a final var while declaring it
         //but if a class has a final member var you cannot assign the value of another class to it but you can change the values of the member variables of it
         final A surabhi= new A("Surabhi Chandra");
+        A nitin= new A("Nitin Das");
+//        surabhi = nitin;
+
         surabhi.name="other name";//can do this
         //when a non primitive is final you cannot reassign it
 //        surabhi=new A("new object");//cant do this
@@ -28,6 +36,9 @@ public class WrapperExample {
         for(int i=0;i<1000000;i++){//if i is small it will not call the garbage collector
             obj=new A("Random name");
         }
+//        A obj =new A("rfherkhg");
+//        System.out.println(obj);//this is giving hash value
+
     }
 
 
